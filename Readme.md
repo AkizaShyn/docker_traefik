@@ -36,3 +36,6 @@ labels:
 
 ```
 
+# Générer un mot de passe : 
+
+docker run --rm httpd:2.4 htpasswd -nbB admin "motdepasse" | sed 's/[$]/$$$$/g'
